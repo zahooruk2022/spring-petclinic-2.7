@@ -1,0 +1,13 @@
+---
+applications:
+  - name: spring-petclinic-2
+    path: target/spring-petclinic-2.7.3.jar # Ensure this matches your build output
+    memory: 1G
+    instances: 1
+    random-route: true
+    stack: cflinuxfs4
+    buildpacks:
+      - java_buildpack_offline
+    env:
+      SPRING_PROFILES_ACTIVE: default
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
