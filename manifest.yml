@@ -1,7 +1,7 @@
 ---
 applications:
   - name: spring-petclinic-2
-    path: <+artifact.path> # Ensure this matches your build output
+    path: <target/spring-petclinic-2.7.3.jar> # Ensure this matches your build output
     memory: 1G
     instances: 1
     random-route: true
